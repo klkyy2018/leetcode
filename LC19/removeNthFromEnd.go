@@ -16,7 +16,7 @@ Given n will always be valid.
  */
 package LC19
 
-import "github.com/klkyy2018/leetcode/utils"
+import "github.com/klkyy2018/leetcode-go/utils"
 
 func removeNthFromEnd(head *utils.ListNode, n int) *utils.ListNode  {
 	if head == nil {

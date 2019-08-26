@@ -2,7 +2,7 @@ package LC206
 
 import (
 	"fmt"
-	"github.com/klkyy2018/leetcode/utils"
+	"github.com/klkyy2018/leetcode-go/utils"
 	"testing"
 )
 

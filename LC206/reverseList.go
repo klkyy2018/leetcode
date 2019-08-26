@@ -12,7 +12,7 @@ Output: 5->4->3->2->1->NULL
  */
 package LC206
 
-import "github.com/klkyy2018/leetcode/utils"
+import "github.com/klkyy2018/leetcode-go/utils"
 
 func reverseList(head *utils.ListNode) *utils.ListNode {
 	if head == nil || head.Next == nil {

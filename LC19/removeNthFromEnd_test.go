@@ -2,7 +2,7 @@ package LC19
 
 import (
 	"fmt"
-	"github.com/klkyy2018/leetcode/utils"
+	"github.com/klkyy2018/leetcode-go/utils"
 	"strconv"
 	"testing"
 )

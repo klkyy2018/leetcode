@@ -9,12 +9,13 @@ import (
  * Definition for singly-linked list.
  */
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
-} 
+}
+
 func NewListNode(val int) *ListNode {
 	return &ListNode{
-		Val: val,
+		Val:  val,
 		Next: nil,
 	}
 }
@@ -36,6 +37,42 @@ func MkSingleList(input []int) *ListNode {
 	return res
 }
 
+func MkCycleList(input []int, pos int) *ListNode {
+	if input == nil || len(input) == 0 {
+		return nil
+	}
+	var iter, lintPos, res *ListNode
+	for index, item := range input {
+		node := NewListNode(item)
+		if index == pos {
+			lintPos = node
+		} else if index == len(input)-1 {
+			node.Next = lintPos
+		}
+		if iter != nil {
+			iter.Next = node
+		} else {
+			res = node
+		}
+		iter = node
+	}
+
+	return res
+}
+
+func HasCycle(head *ListNode) bool {
+	fast := head
+	low := head
+	for fast != nil && fast.Next != nil {
+		low = low.Next
+		fast = fast.Next.Next
+		if low == fast {
+			return true
+		}
+	}
+	return false
+}
+
 func SprintList(input *ListNode) string {
 	res := ""
 	postfix := "->"
@@ -51,14 +88,14 @@ func SprintList(input *ListNode) string {
 	}
 }
 
-func PrintList(input *ListNode)  {
+func PrintList(input *ListNode) {
 	postfix := "->"
 	for {
 		if input == nil {
 			return
 		}
 		if input.Next == nil {
-			postfix = "->NULL\n"
+			postfix = ".\n"
 		}
 		fmt.Printf("%d%s", input.Val, postfix)
 		input = input.Next

@@ -1,3 +1,5 @@
 test:
-	echo $$(date): Running Tests
 	go test ./...
+
+fmt:
+	go fmt  ./...

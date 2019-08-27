@@ -2,15 +2,16 @@ package LC19
 
 import (
 	"fmt"
-	"github.com/klkyy2018/leetcode-go/utils"
 	"strconv"
 	"testing"
+
+	"github.com/klkyy2018/leetcode-go/utils"
 )
 
-func TestRemoveNthFromEnd(t *testing.T)  {
+func TestRemoveNthFromEnd(t *testing.T) {
 	inputs := []struct {
-		input []int
-		n int
+		input  []int
+		n      int
 		wanted *utils.ListNode
 	}{
 		{
@@ -19,29 +20,29 @@ func TestRemoveNthFromEnd(t *testing.T)  {
 			utils.MkSingleList([]int{}),
 		},
 		{
-			[]int{1,2},
+			[]int{1, 2},
 			1,
 			utils.MkSingleList([]int{1}),
 		},
 		{
-			[]int{1,2},
+			[]int{1, 2},
 			2,
 			utils.MkSingleList([]int{2}),
 		},
 		{
-			[]int{1,2,3},
+			[]int{1, 2, 3},
 			1,
-			utils.MkSingleList([]int{1,2}),
+			utils.MkSingleList([]int{1, 2}),
 		},
 		{
-			[]int{1,2,3},
+			[]int{1, 2, 3},
 			2,
-			utils.MkSingleList([]int{1,3}),
+			utils.MkSingleList([]int{1, 3}),
 		},
 		{
-			[]int{1,2,3},
+			[]int{1, 2, 3},
 			3,
-			utils.MkSingleList([]int{2,3}),
+			utils.MkSingleList([]int{2, 3}),
 		},
 		{
 			[]int{},

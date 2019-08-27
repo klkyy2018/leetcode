@@ -13,18 +13,18 @@ Given n will always be valid.
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- */
+*/
 package LC19
 
 import "github.com/klkyy2018/leetcode-go/utils"
 
-func removeNthFromEnd(head *utils.ListNode, n int) *utils.ListNode  {
+func removeNthFromEnd(head *utils.ListNode, n int) *utils.ListNode {
 	if head == nil {
 		return nil
 	}
 	p1 := head
 	p2 := head
-	for i:=0; i<=n; i++ {
+	for i := 0; i <= n; i++ {
 		p2 = p2.Next
 		if p2 == nil && i != n {
 			return head.Next

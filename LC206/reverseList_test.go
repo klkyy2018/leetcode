@@ -6,14 +6,14 @@ import (
 	"testing"
 )
 
-func TestReverseList(t *testing.T)  {
+func TestReverseList(t *testing.T) {
 	inputs := []struct {
-		input []int
+		input  []int
 		wanted *utils.ListNode
 	}{
 		{
-			[]int{1,2,3,4,5},
-			utils.MkSingleList([]int{5,4,3,2,1}),
+			[]int{1, 2, 3, 4, 5},
+			utils.MkSingleList([]int{5, 4, 3, 2, 1}),
 		},
 		{
 			[]int{},
@@ -34,14 +34,14 @@ func TestReverseList(t *testing.T)  {
 	}
 }
 
-func TestReverseListIter(t *testing.T)  {
+func TestReverseListIter(t *testing.T) {
 	inputs := []struct {
-		input []int
+		input  []int
 		wanted *utils.ListNode
 	}{
 		{
-			[]int{1,2,3,4,5},
-			utils.MkSingleList([]int{5,4,3,2,1}),
+			[]int{1, 2, 3, 4, 5},
+			utils.MkSingleList([]int{5, 4, 3, 2, 1}),
 		},
 		{
 			[]int{},

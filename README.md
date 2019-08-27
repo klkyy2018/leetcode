@@ -1,4 +1,4 @@
-My Solutions of Leetcode in golang.
+# My Solutions of Leetcode in golang.
 
 Run `make` to test all functions.
 
